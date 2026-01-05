@@ -4,3 +4,9 @@
 [submodule "algorithms/TheAlgorithms/TypeScript"]
 	path = algorithms/TheAlgorithms/TypeScript
 	url = https://github.com/TheAlgorithms/TypeScript.git
+[submodule "web-projects/multi-language-al-folio"]
+	path = web-projects/multi-language-al-folio
+	url = https://github.com/george-gca/multi-language-al-folio.git
+[submodule "web-projects/devportfolio"]
+	path = web-projects/devportfolio
+	url = https://github.com/RyanFitzgerald/devportfolio.git
