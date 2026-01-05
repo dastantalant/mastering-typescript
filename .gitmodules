@@ -1,0 +1,6 @@
+[submodule "algorithms/TheAlgorithms/JavaScript"]
+	path = algorithms/TheAlgorithms/JavaScript
+	url = https://github.com/TheAlgorithms/JavaScript.git
+[submodule "algorithms/TheAlgorithms/TypeScript"]
+	path = algorithms/TheAlgorithms/TypeScript
+	url = https://github.com/TheAlgorithms/TypeScript.git
