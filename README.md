@@ -1,2 +1,2 @@
 # mastering-typescript
-Mastering Typescript
+Mastering TypeScript

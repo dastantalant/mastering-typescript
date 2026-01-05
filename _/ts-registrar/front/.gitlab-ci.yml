@@ -1,0 +1,40 @@
+include:
+- project: 'infra/templates/gitlab-ci'
+  ref: master
+  file:
+  - 'service-vue.gitlab-ci.yml'
+
+staging-builder-vue:
+  variables:
+    BUILDER_DOCKER_NODE_VERSION: "20"
+    BUILDER_DOCKER_VUE_ENV_FILE: "${STAGING_ENV}"
+    BUILDER_DOCKER_IMAGE_PREFIX: "staging"
+    BUILDER_DOCKERFILE: "Dockerfile"
+
+prod-builder-vue:
+  variables:
+    BUILDER_DOCKER_NODE_VERSION: "20"
+    BUILDER_DOCKER_VUE_ENV_FILE: "${PROD_ENV}"
+    BUILDER_DOCKER_IMAGE_PREFIX: "prod"
+    BUILDER_DOCKERFILE: "Dockerfile"
+
+staging-deployer-k8s:
+  variables:
+    DEPLOYER_HELM_NAME: 'staging-registrar-frontend'
+    DEPLOYER_HELM_VALUES: 'helm/staging-values.yml'
+    DEPLOYER_KUBECONFIG: ${STAGING_KUBECONFIG}
+
+prod-deployer-k8s:
+  variables:
+    DEPLOYER_HELM_NAME: 'prod-registrar-frontend'
+    DEPLOYER_HELM_VALUES: 'helm/prod-values.yml'
+  before_script:
+  - export VAULT_ADDR=https://vault.o.kg
+  - export VAULT_TOKEN="$(vault write -field=token auth/jwt/login role=kube-config-prod-role-protected jwt=$VAULT_ID_TOKEN)"
+  - export "$(vault kv get -field=prod02-k8s-nurtelecom devops/k8s/config)"
+  - mkdir ~/.kube
+  - echo $KUBE_CONFIG | base64 -d > ~/.kube/config
+  - chmod 600 ~/.kube/config
+  - export VAULT_TOKEN="$(vault write -field=token auth/jwt/login role=tls-certificate-prod-role-protected jwt=$VAULT_ID_TOKEN)"
+  - export "$(vault kv get -field=${DOMAIN}-tls-crt devops/tls/certificate)"
+  - export "$(vault kv get -field=${DOMAIN}-tls-key devops/tls/certificate)"
