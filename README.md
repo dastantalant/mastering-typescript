@@ -1,83 +1,316 @@
-# mastering-typescript
-Mastering TypeScript
+<!--
+Hey, thanks for using the awesome-readme-template template.
+If you have any enhancements, then fork this project and create a pull request
+or just open an issue with the label "enhancement".
 
+Don't forget to give this project a star for additional support ;)
+Maybe you can mention me or this repo in the acknowledgements too
+-->
+<div align="center">
 
-# Git Submodules Management Guide
+  <img src="assets/logo.png" alt="logo" width="200" height="auto" />
+  <h1>Awesome Readme Template</h1>
+  
+  <p>
+    An awesome README template for your projects! 
+  </p>
+  
+  
+<!-- Badges -->
+<p>
+  <a href="https://github.com/Louis3797/awesome-readme-template/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/Louis3797/awesome-readme-template" alt="contributors" />
+  </a>
+  <a href="">
+    <img src="https://img.shields.io/github/last-commit/Louis3797/awesome-readme-template" alt="last update" />
+  </a>
+  <a href="https://github.com/Louis3797/awesome-readme-template/network/members">
+    <img src="https://img.shields.io/github/forks/Louis3797/awesome-readme-template" alt="forks" />
+  </a>
+  <a href="https://github.com/Louis3797/awesome-readme-template/stargazers">
+    <img src="https://img.shields.io/github/stars/Louis3797/awesome-readme-template" alt="stars" />
+  </a>
+  <a href="https://github.com/Louis3797/awesome-readme-template/issues/">
+    <img src="https://img.shields.io/github/issues/Louis3797/awesome-readme-template" alt="open issues" />
+  </a>
+  <a href="https://github.com/Louis3797/awesome-readme-template/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/Louis3797/awesome-readme-template.svg" alt="license" />
+  </a>
+</p>
+   
+<h4>
+    <a href="https://github.com/Louis3797/awesome-readme-template/">View Demo</a>
+  <span> · </span>
+    <a href="https://github.com/Louis3797/awesome-readme-template">Documentation</a>
+  <span> · </span>
+    <a href="https://github.com/Louis3797/awesome-readme-template/issues/">Report Bug</a>
+  <span> · </span>
+    <a href="https://github.com/Louis3797/awesome-readme-template/issues/">Request Feature</a>
+  </h4>
+</div>
 
-This guide explains how to add, update, and completely remove Git submodules in this project.
+<br />
 
-## 1. Adding a Submodule
+<!-- Table of Contents -->
 
-### Option A: Using IntelliJ IDEA (Recommended)
-1. Open the **Git** tool window (`Alt+9` or `Cmd+9`).
-2. Right-click on the project root in the project tree.
-3. Select **Git** -> **Submodules** -> **Add...**
-4. Enter the **Repository URL** and the **Relative Path** (the folder name).
-5. Click **OK**.
+# :notebook_with_decorative_cover: Table of Contents
 
-### Option B: Using Command Line (Cross-platform)
-Run this command from the project root:
+- [:notebook\_with\_decorative\_cover: Table of Contents](#notebook_with_decorative_cover-table-of-contents)
+  - [:star2: About the Project](#star2-about-the-project)
+    - [:camera: Screenshots](#camera-screenshots)
+    - [:space\_invader: Tech Stack](#space_invader-tech-stack)
+    - [:dart: Features](#dart-features)
+    - [:art: Color Reference](#art-color-reference)
+    - [:key: Environment Variables](#key-environment-variables)
+  - [:toolbox: Getting Started](#toolbox-getting-started)
+    - [:bangbang: Prerequisites](#bangbang-prerequisites)
+    - [:gear: Installation](#gear-installation)
+    - [:test\_tube: Running Tests](#test_tube-running-tests)
+    - [:running: Run Locally](#running-run-locally)
+    - [:triangular\_flag\_on\_post: Deployment](#triangular_flag_on_post-deployment)
+  - [:eyes: Usage](#eyes-usage)
+  - [:compass: Roadmap](#compass-roadmap)
+  - [:wave: Contributing](#wave-contributing)
+    - [:scroll: Code of Conduct](#scroll-code-of-conduct)
+  - [:grey\_question: FAQ](#grey_question-faq)
+  - [:warning: License](#warning-license)
+  - [:handshake: Contact](#handshake-contact)
+  - [:gem: Acknowledgements](#gem-acknowledgements)
+
+<!-- About the Project -->
+
+## :star2: About the Project
+
+<!-- Screenshots -->
+
+### :camera: Screenshots
+
+<div align="center"> 
+  <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
+</div>
+
+<!-- TechStack -->
+
+### :space_invader: Tech Stack
+
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
+    <li><a href="https://nextjs.org/">Next.js</a></li>
+    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://tailwindcss.com/">TailwindCSS</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
+    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://go.dev/">Golang</a></li>
+    <li><a href="https://nestjs.com/">Nest.js</a></li>
+    <li><a href="https://socket.io/">SocketIO</a></li>
+    <li><a href="https://www.prisma.io/">Prisma</a></li>    
+    <li><a href="https://www.apollographql.com/">Apollo</a></li>
+    <li><a href="https://graphql.org/">GraphQL</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.mysql.com/">MySQL</a></li>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li><a href="https://redis.io/">Redis</a></li>
+    <li><a href="https://neo4j.com/">Neo4j</a></li>
+    <li><a href="https://www.mongodb.com/">MongoDB</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>DevOps</summary>
+  <ul>
+    <li><a href="https://www.docker.com/">Docker</a></li>
+    <li><a href="https://www.jenkins.io/">Jenkins</a></li>
+    <li><a href="https://circleci.com/">CircleCLI</a></li>
+  </ul>
+</details>
+
+<!-- Features -->
+
+### :dart: Features
+
+- Feature 1
+- Feature 2
+- Feature 3
+
+<!-- Color Reference -->
+
+### :art: Color Reference
+
+| Color           | Hex                                                              |
+| --------------- | ---------------------------------------------------------------- |
+| Primary Color   | ![#222831](https://via.placeholder.com/10/222831?text=+) #222831 |
+| Secondary Color | ![#393E46](https://via.placeholder.com/10/393E46?text=+) #393E46 |
+| Accent Color    | ![#00ADB5](https://via.placeholder.com/10/00ADB5?text=+) #00ADB5 |
+| Text Color      | ![#EEEEEE](https://via.placeholder.com/10/EEEEEE?text=+) #EEEEEE |
+
+<!-- Env Variables -->
+
+### :key: Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`API_KEY`
+
+`ANOTHER_API_KEY`
+
+<!-- Getting Started -->
+
+## :toolbox: Getting Started
+
+<!-- Prerequisites -->
+
+### :bangbang: Prerequisites
+
+This project uses Yarn as package manager
+
 ```bash
-git submodule add <repository_url> <path/to/folder>
-git commit -m "Add submodule in <path/to/folder>"
-git push
+ npm install --global yarn
 ```
 
----
+<!-- Installation -->
 
-## 2. Cloning a Project with Submodules
-If you have just cloned the main repository, the submodule folders will be empty. Run the following to initialize them:
+### :gear: Installation
+
+Install my-project with npm
 
 ```bash
-git submodule update --init --recursive --jobs 10
+  yarn install my-project
+  cd my-project
 ```
 
----
+<!-- Running Tests -->
 
-## 3. Updating Submodules
-To pull the latest changes from the submodule's remote repository:
+### :test_tube: Running Tests
 
-**Via IntelliJ:**
-* Go to **Git** -> **Submodules** -> **Update...**
+To run tests, run the following command
 
-**Via Command Line:**
 ```bash
-git submodule update --remote --merge
+  yarn test test
 ```
 
----
+<!-- Run Locally -->
 
-## 4. Removing a Submodule
-Removing a submodule requires a few steps to clean up Git's internal tracking.
+### :running: Run Locally
 
-### Step 1: Remove from Index
-Run this in your terminal:
+Clone the project
+
 ```bash
-git rm -f <path/to/submodule>
+  git clone https://github.com/Louis3797/awesome-readme-template.git
 ```
 
-### Step 2: Delete the internal Git directory
-This is where commands differ based on your Operating System:
+Go to the project directory
 
-#### **For Windows (PowerShell):**
-```powershell
-Remove-Item -Recurse -Force .git/modules/<path/to/submodule>
-```
-
-#### **For Linux / macOS / Git Bash:**
 ```bash
-rm -rf .git/modules/<path/to/submodule>
+  cd my-project
 ```
 
-### Step 3: Final Cleanup (Manual Check)
-1. Open `.gitmodules` file in the root directory. If the section for that submodule still exists, delete it.
-2. Open `.git/config` file. If the submodule section exists there, delete it.
-3. Commit and push the changes:
+Install dependencies
+
 ```bash
-git add .gitmodules
-git commit -m "Completely remove submodule <name>"
-git push
+  yarn install
 ```
 
----
+Start the server
 
+```bash
+  yarn start
+```
+
+<!-- Deployment -->
+
+### :triangular_flag_on_post: Deployment
+
+To deploy this project run
+
+```bash
+  yarn deploy
+```
+
+<!-- Usage -->
+
+## :eyes: Usage
+
+Use this space to tell a little more about your project and how it can be used. Show additional screenshots, code samples, demos or link to other resources.
+
+```javascript
+import Component from "my-project";
+
+function App() {
+  return <Component />;
+}
+```
+
+<!-- Roadmap -->
+
+## :compass: Roadmap
+
+- [x] Todo 1
+- [ ] Todo 2
+
+<!-- Contributing -->
+
+## :wave: Contributing
+
+<a href="https://github.com/Louis3797/awesome-readme-template/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Louis3797/awesome-readme-template" />
+</a>
+
+Contributions are always welcome!
+
+See `contributing.md` for ways to get started.
+
+<!-- Code of Conduct -->
+
+### :scroll: Code of Conduct
+
+Please read the [Code of Conduct](https://github.com/Louis3797/awesome-readme-template/blob/master/CODE_OF_CONDUCT.md)
+
+<!-- FAQ -->
+
+## :grey_question: FAQ
+
+- Question 1
+
+  - Answer 1
+
+- Question 2
+
+  - Answer 2
+
+<!-- License -->
+
+## :warning: License
+
+Distributed under the no License. See LICENSE.txt for more information.
+
+<!-- Contact -->
+
+## :handshake: Contact
+
+Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+
+Project Link: [https://github.com/Louis3797/awesome-readme-template](https://github.com/Louis3797/awesome-readme-template)
+
+<!-- Acknowledgments -->
+
+## :gem: Acknowledgements
+
+Use this section to mention useful resources and libraries that you have used in your projects.
+
+- [Shields.io](https://shields.io/)
+- [Awesome README](https://github.com/matiassingers/awesome-readme)
+- [Emoji Cheat Sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#travel--places)
+- [Readme Template](https://github.com/othneildrew/Best-README-Template)
